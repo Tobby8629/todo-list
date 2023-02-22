@@ -57,7 +57,7 @@ function Home() {
         {todos.map((todo) => (
           <div className="todo" key={todo.id}>
             <input type="checkbox" checked={todo.completed} onChange={() => { handleChange(todo.id); }} />
-            <input type="text" value={todo.value} readOnly className={todo.completed && 'line'} />
+            <input type="text" value={todo.value} readOnly className={todo.completed ? 'line' : undefined} />
             <i className="fa-solid fa-trash" onClick={() => { handleDelete(todo.id); }} role="none" onKeyDown={() => { handleDelete(todo.id); }} />
           </div>
 
