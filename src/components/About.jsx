@@ -4,9 +4,8 @@ import Appli from './Appli';
 import Dev from './Dev';
 
 function About() {
-//  const [Dev, setDev] = useState(false);
   return (
-    <div className="about">
+    <div className="all">
       <h2>About page.</h2>
       <div className="more">
         <ul>

@@ -42,22 +42,25 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <div className="all">
       <div className="hea">
-        <h2>todos</h2>
+        <h2>todos .</h2>
         <p>Items will persist in the browser local storage</p>
       </div>
 
-      <form action="" onSubmit={handlesubmit}>
+      <form action="" onSubmit={handlesubmit} className="Hform">
         <input type="text" value={input} onChange={(e) => { setInput(e.target.value); }} />
         <button type="submit" aria-label="mute volume"><i className="fa-solid fa-plus" /></button>
       </form>
 
-      <div className="todo">
+      <div className="todos">
         {todos.map((todo) => (
           <div className="todo" key={todo.id}>
-            <input type="checkbox" checked={todo.completed} onChange={() => { handleChange(todo.id); }} />
-            <input type="text" value={todo.value} readOnly className={todo.completed ? 'line' : undefined} />
+            <div className="mssge">
+              <input type="checkbox" checked={todo.completed} onChange={() => { handleChange(todo.id); }} className="checkbox" />
+              <input type="text" value={todo.value} readOnly className={todo.completed ? 'line' : undefined} />
+            </div>
+
             <i className="fa-solid fa-trash" onClick={() => { handleDelete(todo.id); }} role="none" onKeyDown={() => { handleDelete(todo.id); }} />
           </div>
 
