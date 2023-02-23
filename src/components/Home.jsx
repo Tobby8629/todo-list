@@ -32,13 +32,17 @@ function Home() {
   };
 
   const handleChange = (id) => {
-    todos.forEach((todo) => {
-      if (todo.id === id) {
-        todo.completed = !todo.completed;
-        localStorage.setItem('todo', JSON.stringify(todos));
-        setTodos([...todos]);
-      }
-    });
+    setTodos((prev) => (
+      prev.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      })
+    ));
   };
 
   return (
