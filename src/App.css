@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
-}
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,300&family=Saira:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,300&display=swap');
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ body {
+  padding: 2rem 3rem;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ .line {
+  text-decoration: line-through;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ /*** Nav ***/
+
+ .menu i {
+   font-size: 30px;
+ }
+
+ nav ul {
+    position: absolute;
+    top: 20%;
+    transition: .3s linear;
+    background-color: whitesmoke;
+    border-radius: 5px;
+ }
+
+ .show {
+    left: 30px;
+ }
+
+ .hide {
+    left: -50%;
+ }
+
+ nav li {
+    list-style: none;
+    padding: 1rem;
+ }
+
+ nav li:last-child {
+    border-top: 1px solid grey;
+    color: gray;
+    
+ }
+
+ nav a {
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+ }
+
+ nav li a:focus {
+    color: rgb(124, 30, 143);
+ }
+
+ nav li a:hover {
+    color: gray;
+ }
+
+
+
+
+
+
+ /** Home **/
+ 
+ .all {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 90vh;
+ }
+
+ .all h2 {
+    font-size: 4rem;
+    text-align: center;
+    color: gray
+ }
+
+ .hea p {
+    text-align: center;
+    margin-bottom: 1rem;
+ }
+
+ .Hform {
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgb(149, 149, 255);
+    width: 60%;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 10px;   
+ }
+
+ .Hform input {
+    width: 100%;
+    border: none;
+    outline: none;
+ }
+
+ .Hform button {
+   margin: 5px;
+   background-color: rgb(58, 58, 58);
+   border-radius: 50%;
+   outline: none;
+   border: none;
+ }
+
+ .Hform button i {
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+ }
+
+ .todos {
+    width: 60%;  
+ }
+
+ .todo {
+    margin: 3px 0;
+    background-color: whitesmoke;
+    padding: .8rem .8rem;
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .mssge {
+    width: 90%;
+ }
+
+.mssge input:last-child {
+    width: 80%;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    border: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
+ .checkbox {
+    margin: 0 10px;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ /** more **/
+
+ .more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+ }
+
+ .more ul {
+    width: 20%;
+ }
+
+ .more li {
+    margin: 10px 0;
+    list-style: none;
+ }
+
+ .more a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(35, 34, 34);
+ }
+
+ .more .link {
+    width: 80%;
+ }
+
+ .link h3 {
+    margin: 10px 0;
+    font-size: 23px;
+ }
+
+ .link p {
+    margin: 5px 0;
+ }
+
+ .more a:focus {
+    color: rgb(91, 1, 109);
+ }
+
+ /*** Login ***/
+
+ .Lform {
+   width: 30%;
+   display: flex;
+   flex-direction: column; 
+ }
+
+ .Lform input {
+    margin: 10px 0px;
+    padding: 10px;
+ }
+
+ .Lform button {
+    padding: 10px;
+ }
